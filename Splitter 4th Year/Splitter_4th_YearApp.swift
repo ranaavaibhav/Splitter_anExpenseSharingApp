@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct Splitter_4th_YearApp: App {
+    @StateObject var transactionLVM = TransactionListViewModel()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(transactionLVM)
         }
     }
 }

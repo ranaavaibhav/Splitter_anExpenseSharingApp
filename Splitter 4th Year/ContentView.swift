@@ -1,24 +1,45 @@
-//
-//  ContentView.swift
-//  Splitter 4th Year
-//
-//  Created by Vaibhav on 28/03/25.
-//
-
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView {
+            ScrollView {
+                VStack(alignment: .leading, spacing: 24) {
+                    // Title
+                    Text("Overview")
+                        .font(.title2)
+                        .bold()
+                    
+                    RecentTransactionList()
+                }
+                .padding()
+                .frame(maxWidth: .infinity)
+            }
+            .background(Color.Background)
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                // Notification
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Image(systemName: "bell.badge")
+                        .symbolRenderingMode(.palette)
+                        .foregroundStyle(Color.Icon, .primary)
+                }
+            }
         }
-        .padding()
+        .navigationViewStyle(.stack)
     }
 }
 
-#Preview {
-    ContentView()
+struct ContentView_Previews: PreviewProvider {
+    static let transactionLVM: TransactionListViewModel = {
+        let viewModel = TransactionListViewModel()
+        viewModel.transactions = transactionListPreviewData
+        return viewModel
+    }()
+    
+    static var previews: some View {
+        ContentView()
+            .preferredColorScheme(.dark)
+            .environmentObject(transactionLVM)
+    }
 }

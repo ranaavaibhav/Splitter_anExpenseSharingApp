@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		80A02B9A2D97371B00DE0B1E /* SwiftUIFontIcon in Frameworks */ = {isa = PBXBuildFile; productRef = 80A02B992D97371B00DE0B1E /* SwiftUIFontIcon */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		80A02B7F2D970DB500DE0B1E /* Splitter 4th Year.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Splitter 4th Year.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80A02B9A2D97371B00DE0B1E /* SwiftUIFontIcon in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 			);
 			name = "Splitter 4th Year";
 			packageProductDependencies = (
+				80A02B992D97371B00DE0B1E /* SwiftUIFontIcon */,
 			);
 			productName = "Splitter 4th Year";
 			productReference = 80A02B7F2D970DB500DE0B1E /* Splitter 4th Year.app */;
@@ -94,6 +100,9 @@
 			);
 			mainGroup = 80A02B762D970DB500DE0B1E;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				80A02B982D97371B00DE0B1E /* XCRemoteSwiftPackageReference "SwiftUIFontIcon" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 80A02B802D970DB500DE0B1E /* Products */;
 			projectDirPath = "";
@@ -322,6 +331,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		80A02B982D97371B00DE0B1E /* XCRemoteSwiftPackageReference "SwiftUIFontIcon" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/huybuidac/SwiftUIFontIcon";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		80A02B992D97371B00DE0B1E /* SwiftUIFontIcon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 80A02B982D97371B00DE0B1E /* XCRemoteSwiftPackageReference "SwiftUIFontIcon" */;
+			productName = SwiftUIFontIcon;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 80A02B772D970DB500DE0B1E /* Project object */;
 }
